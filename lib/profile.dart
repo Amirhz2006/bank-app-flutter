@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'editProfile.dart';
 
 class profile extends StatelessWidget {
   static const routeName = '/profile';
@@ -43,7 +44,7 @@ class profile extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamed(context, editProfile.routeName),
                   icon: const Icon(Icons.edit),
                   label: const Text('ویرایش پروفایل'),
                 ),

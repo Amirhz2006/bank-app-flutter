@@ -3,6 +3,8 @@ import 'accountsManagement.dart';
 import 'groupsManagement.dart';
 import 'login.dart';
 import 'profile.dart';
+import 'cardToCard.dart';
+import 'moneyTransfer.dart';
 
 class home extends StatelessWidget {
   static const routeName = '/home';
@@ -96,14 +98,14 @@ class home extends StatelessWidget {
                       Navigator.pushNamed(context, groupsManagement.routeName),
                 ),
                 _QuickCard(
-                  title: 'کارت به کارت (نمایشی)',
+                  title: 'کارت به کارت',
                   icon: Icons.credit_card,
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, cardToCard.routeName),
                 ),
                 _QuickCard(
-                  title: 'انتقال پول (نمایشی)',
+                  title: 'انتقال پول',
                   icon: Icons.swap_horiz,
-                  onTap: () {},
+                    onTap: () => Navigator.pushNamed(context, moneyTransfer.routeName),
                 ),
               ],
             ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'cardToCard.dart';
+import 'moneyTransfer.dart';
+import 'editProfile.dart';
 import 'profile.dart';
 import 'login.dart';
 import 'signup.dart';
@@ -18,11 +21,10 @@ class BankPhase1App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bank System',
+      title: 'سامانه بانکی',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.blue,
+        primarySwatch: Colors.green,
         fontFamily: 'Vazir',
       ),
       initialRoute: login.routeName,
@@ -35,6 +37,9 @@ class BankPhase1App extends StatelessWidget {
         groupsManagement.routeName: (_) => const groupsManagement(),
         groupDetails.routeName: (_) => const groupDetails(),
         profile.routeName: (_) => const profile(),
+        cardToCard.routeName: (_) => const cardToCard(),
+        moneyTransfer.routeName: (_) => const moneyTransfer(),
+        editProfile.routeName: (_) => const editProfile(),
       },
     );
   }
